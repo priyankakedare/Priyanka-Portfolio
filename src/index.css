@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar for dark plum aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #100a16;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #0d0812;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3e2645;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d87fae;
+  }
+}
+
+@layer utilities {
+  .bg-radial-plum {
+    background-radial: radial-gradient(circle at 50% 20%, rgba(181, 101, 155, 0.15) 0%, transparent 60%);
+  }
+  
+  .glass-card {
+    background: rgba(24, 15, 30, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(224, 147, 187, 0.12);
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(216, 127, 174, 0.2);
+  }
+}
